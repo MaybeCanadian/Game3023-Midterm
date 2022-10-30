@@ -18,6 +18,15 @@ public class ItemSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     [SerializeField]
     private int count = 0;
+
+    [SerializeField]
+    private bool InCraftingMode = false;
+
+    public void SetInCraftingMode(bool input)
+    {
+        InCraftingMode = input;
+    }
+
     public int Count
     {
         get { return count; }
@@ -63,11 +72,27 @@ public class ItemSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         if (CanUseItem())
         {
-            item.Use();
-            if (item.isConsumable)
+            if (!InCraftingMode)
             {
-                Count--;
+                item.Use();
+                if (item.isConsumable)
+                {
+                    Count--;
+                }
             }
+            else
+            {
+                if(item.alchemy)
+                {
+                    if(AlchemyController.Instance.AddItemToCraftingGroup(item.alchemy, item.icon)) //we only want to reudce how much we have if there is space.
+                        Count--;
+                }
+                else
+                {
+                    Debug.Log("This item does not have an alchemy component");
+                }
+            }
+            
         }
     }
 

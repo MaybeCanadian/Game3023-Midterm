@@ -82,15 +82,7 @@ public class ItemSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             }
             else
             {
-                if(item.alchemy)
-                {
-                    if(AlchemyController.Instance.AddItemToCraftingGroup(item.alchemy, item.icon)) //we only want to reudce how much we have if there is space.
-                        Count--;
-                }
-                else
-                {
-                    Debug.Log("This item does not have an alchemy component");
-                }
+                
             }
             
         }

@@ -46,42 +46,4 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-
-    public void StartCrafting()
-    {
-        AlchemyController.Instance.StartCraft();
-    }
-
-    public void CancelCrafting()
-    {
-        Debug.Log("removing");
-        foreach(AlchemyItem alcItem in AlchemyController.Instance.CancelCraft())
-        {
-            GetItem(alcItem); //we return back the item parent.
-        }
-    }
-
-    public void GetItem(AlchemyItem itemType)  //we need to make sure we have a getitem function to be able to return the items back after we dont need them anymore
-    {
-        ItemSlot firstEmpty = null;
-
-        foreach(ItemSlot slot in itemSlots)
-        {
-            if(slot.item.alchemy == itemType)
-            {
-                slot.Count++;
-                return;
-            }
-
-            if(slot.item == null && firstEmpty == null)
-            {
-                firstEmpty = slot;
-            }
-        }
-
-        //https://docs.unity3d.com/Manual/class-ScriptableObject.html for the functions
-        firstEmpty.item = ScriptableObject.CreateInstance<>
-        firstEmpty.Count = 1;
-    }
-    
 }

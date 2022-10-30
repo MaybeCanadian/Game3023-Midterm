@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 3385196080907519987}
   - component: {fileID: 8673891082107215031}
   - component: {fileID: 6513239622161534541}
-  - component: {fileID: 8963099589522708115}
+  - component: {fileID: 5069576380148136962}
   m_Layer: 5
   m_Name: CraftingSlot
   m_TagString: Untagged
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8963099589522708115
+--- !u!114 &5069576380148136962
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,8 +163,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2496819577470763318}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2e2abc9d84fd5b46b8629476aa65d76, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a4b1f6310835f74ab78b5436411e98e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 8379125472945096252}
-  isActive: 0

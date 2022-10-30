@@ -103,6 +103,42 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1472,7 +1508,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_ui_edited_67
+      name: BG
       rect:
         serializedVersion: 2
         x: 5
@@ -1986,14 +2022,13 @@ TextureImporter:
       menu_ui_edited_10: -890986877
       menu_ui_edited_12: -166557383
       menu_ui_edited_4: -1079446438
-      menu_ui_edited_67: 2043398250
+      menu_ui_edited_88: -1085921977
       menu_ui_edited_56: -1385250883
       menu_ui_edited_72: -1322694731
       menu_ui_edited_20: -2050533882
       menu_ui_edited_36: 2074054618
       menu_ui_edited_50: -496827347
       menu_ui_edited_44: 1000465552
-      menu_ui_edited_88: -1085921977
       menu_ui_edited_47: 895315308
       menu_ui_edited_28: -1108013949
       menu_ui_edited_11: 222952782
@@ -2039,6 +2074,7 @@ TextureImporter:
       menu_ui_edited_82: 1686240148
       menu_ui_edited_58: 541572528
       menu_ui_edited_59: -934145362
+      BG: 2043398250
       menu_ui_edited_39: 869587467
       menu_ui_edited_29: 1099890546
       menu_ui_edited_75: 92294495

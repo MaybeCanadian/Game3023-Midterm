@@ -10,18 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fe5432e7a6822643bcf55fbeaa787d5, type: 3}
-  m_Name: Nut
+  m_Name: DefaultCraftedItem
   m_EditorClassIdentifier: 
-  itemName: Nut
-  Description: A hard nut, hard to eat with the shell on. Best Used in crafting
-  UseEffects:
-  - effectType: 0
-    strength: 3
-    duration: 1
-  itemUseEffect: Heal 3 HP.
-  CraftingEffects:
-  - effectType: 0
-    strength: 7
-    duration: 0
-  itemIcon: {fileID: 21300000, guid: c0c6f69c9b1b4a943a649eb5f4d191bc, type: 3}
+  itemName: Crafted Item
+  Description: Something that was crafted, I wonder what it might do?
+  UseEffects: []
+  CraftingEffects: []
+  itemIcon: {fileID: 21300000, guid: 15c414eaeeaa5924fb8637a40516b7e0, type: 3}
   CanBeIngredient: 1

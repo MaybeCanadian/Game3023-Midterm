@@ -13,9 +13,16 @@ MonoBehaviour:
   m_Name: Feather
   m_EditorClassIdentifier: 
   itemName: Feather
-  Description: A small feather, it floats as if by magic in the air.
-  ItemEffects:
+  Description: A small feather, it floats as if by magic in the air. Best Used in
+    crafting
+  UseEffects:
   - effectType: 1
-    strength: 10
+    strength: 2
+    duration: 1
+  itemUseEffect: Gain 3 MP.
+  CraftingEffects:
+  - effectType: 1
+    strength: 7
     duration: 1
   itemIcon: {fileID: 21300000, guid: fd26c6ca12fdea94bb44cf8302c39052, type: 3}
+  CanBeIngredient: 1

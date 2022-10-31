@@ -10,9 +10,15 @@ using UnityEngine;
 public class AlchemyItem : ScriptableObject
 {
     public string itemName = "";
+    [TextArea]
     public string Description = "";
-    public List<Effect> ItemEffects;
+    public List<Effect> UseEffects;
+    [TextArea]
+    public string itemUseEffect = "";
+    public List<Effect> CraftingEffects;
     public Sprite itemIcon;
+
+    public bool CanBeIngredient = true;
 }
 
 [System.Serializable]

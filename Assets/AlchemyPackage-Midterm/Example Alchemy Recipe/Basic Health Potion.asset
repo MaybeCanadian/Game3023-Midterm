@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eedf1a9a5be8ae24fa6b075acc32002f, type: 3}
   m_Name: Basic Health Potion
   m_EditorClassIdentifier: 
+  ingredients: []
+  outPutItem: {fileID: 0}
+  SuccessChance: 100

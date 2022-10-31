@@ -21,6 +21,8 @@ public class AlcPackageActiveItem : MonoBehaviour
     [SerializeField]
     private GameObject activeParent;
     [SerializeField]
+    private TMP_Text itemEffects;
+    [SerializeField]
     private AlcPackageInventory inventory;
 
     [Header("Active Values")]
@@ -32,6 +34,8 @@ public class AlcPackageActiveItem : MonoBehaviour
     private int activeCount;
     [SerializeField]
     private Sprite activeIcon;
+    [SerializeField]
+    private string activeEffects;
 
 
     private void Start()
@@ -53,16 +57,18 @@ public class AlcPackageActiveItem : MonoBehaviour
         itemCount.text = activeCount.ToString();
         itemDescription.text = activeDescription;
         itemIcon.sprite = activeIcon;
+        itemEffects.text = activeEffects;
 
     }
 
-    public void SetActiveItemValues(Sprite icon, string name, string description, int count)
+    public void SetActiveItemValues(Sprite icon, string name, string description, int count, string effectDescription)
     {
         activeName = name;
         activeDescription = description;
         activeIcon = icon;
         activeCount = count;
         hasItem = true;
+        activeEffects = effectDescription;
 
         UpdateActiveSlot();
     }

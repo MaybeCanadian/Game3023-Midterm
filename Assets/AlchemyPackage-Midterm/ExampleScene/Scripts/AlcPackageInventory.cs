@@ -64,7 +64,7 @@ public class AlcPackageInventory : MonoBehaviour
         {
             Debug.Log("pressed on " + items[slotNumber].item.itemName);
             activeItem.SetActiveItemValues(items[slotNumber].item.itemIcon, items[slotNumber].item.itemName,
-                items[slotNumber].item.Description, items[slotNumber].Count);
+                items[slotNumber].item.Description, items[slotNumber].Count, items[slotNumber].item.itemUseEffect);
 
             activeSlot = slotNumber;
         }
@@ -120,6 +120,14 @@ public class AlcPackageInventory : MonoBehaviour
     } //this is a small helper function to assist with changing the count in the struct
     //since it is passed as a copy I need to make a new one first. Might now be the best method, could make the struct a class but then we lose the
     //editor setting
+
+    public AlchemyItem GetAlchemyItem(int slotNumber)
+    {
+        if (slotNumber == -1)
+            return null;
+
+        return items[slotNumber].item;
+    }
 
 }
 

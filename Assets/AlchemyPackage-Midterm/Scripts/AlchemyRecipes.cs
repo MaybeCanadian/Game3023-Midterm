@@ -8,4 +8,6 @@ public class AlchemyRecipes : ScriptableObject
     public List<AlchemyItem> ingredients;
 
     public AlchemyItem outPutItem;
+
+    public float SuccessChance = 100;
 }

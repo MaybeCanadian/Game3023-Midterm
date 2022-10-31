@@ -43,4 +43,26 @@ public class AlcPackageCraftingController : MonoBehaviour
 
         allocatedItems.Clear();
     }
+
+    public void OnConfirmButtonPressed()
+    {
+        List<AlchemyItem> craftingItems = new List<AlchemyItem>();
+
+        foreach(int item in allocatedItems)
+        {
+            craftingItems.Add(inventory.GetAlchemyItem(item));
+        }
+
+        foreach(AlchemyItem item in craftingItems) //checks we have no uncraftable items
+        {
+            if(item.CanBeIngredient == false)
+            {
+                Debug.Log("Error, something in this can't be crafted.");
+                return;
+            }
+        }
+
+
+
+    }
 }

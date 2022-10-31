@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AlcPackageCraftingController : MonoBehaviour
 {
+    static public AlcPackageCraftingController instance;
+
     [Header("Slots")]
     [SerializeField]
     private List<AlcPackageCraftingSlot> craftingSlots;
@@ -12,17 +14,23 @@ public class AlcPackageCraftingController : MonoBehaviour
     [SerializeField]
     private List<int> allocatedItems;
 
-    [Header("UI References")]
-    [SerializeField]
-    private AlcPackageInventory inventory;
-    [SerializeField]
-    private AlchemyController controller;
+    private void Awake()
+    {
+        if(instance != this && instance != null)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
+    } //sets up the instance
 
     public Sprite GetActiveSprite(out int slotNumber)
     {
         int inSlotNum;
         Sprite tempSprite;
-        tempSprite = inventory.GetActiveSprite(out inSlotNum);
+        tempSprite = AlcPackageInventory.instance.GetActiveSprite(out inSlotNum);
         if(inSlotNum >= 0)
             allocatedItems.Add(inSlotNum);
 
@@ -33,7 +41,7 @@ public class AlcPackageCraftingController : MonoBehaviour
     public void RemoveItemFromCrafting(int slotNumber)
     {
         allocatedItems.Remove(slotNumber);
-        inventory.ReturnItem(slotNumber, 1);
+        AlcPackageInventory.instance.ReturnItem(slotNumber, 1);
     }
 
     public void OnCancelButtonPressed()
@@ -52,7 +60,7 @@ public class AlcPackageCraftingController : MonoBehaviour
 
         foreach(int item in allocatedItems)
         {
-            craftingItems.Add(inventory.GetAlchemyItem(item)); //we set up all the alchemy items we are using
+            craftingItems.Add(AlcPackageInventory.instance.GetAlchemyItem(item)); //we set up all the alchemy items we are using
         }
 
         foreach(AlchemyItem item in craftingItems) //checks we have no uncraftable items
@@ -64,11 +72,11 @@ public class AlcPackageCraftingController : MonoBehaviour
             }
         }
 
-        AlchemyItem outPutItem = controller.StartCraft(craftingItems, out int amount, out bool consumed);
+        AlchemyItem outPutItem = AlchemyController.instance.StartCraft(craftingItems, out int amount, out bool consumed);
 
         if (outPutItem)
         {
-            inventory.AddItem(outPutItem, amount); //this addes our new item to the inventory
+            AlcPackageInventory.instance.AddItem(outPutItem, amount); //this addes our new item to the inventory
         }
         else
             Debug.Log("failed to craft.");

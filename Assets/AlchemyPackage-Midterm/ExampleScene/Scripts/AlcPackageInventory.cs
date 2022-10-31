@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AlcPackageInventory : MonoBehaviour
 {
+    static public AlcPackageInventory instance;
+
     [Header("Inventory")]
     [SerializeField]
     private List<InventoryItem> items;
@@ -19,6 +21,18 @@ public class AlcPackageInventory : MonoBehaviour
     private AlcPackageActiveItem activeItem;
     [SerializeField]
     private int activeSlot = -1;
+
+    private void Awake()
+    {
+        if(instance != this && instance != null)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
 
 
     private void Start()
@@ -57,6 +71,17 @@ public class AlcPackageInventory : MonoBehaviour
     } //goes through the list of items we have and shows them on the slots, the item order is the order in the list
     //if items are added or removed it should be fine.
 
+    private void RemoveEmpty()
+    {
+        foreach(InventoryItem item in items)
+        {
+            if(item.Count <= 0)
+            {
+                items.Remove(item);
+            }
+        } 
+    }
+
     public void SlotPressed(int slotNumber)
     {
         ResetSelectedSlot();
@@ -88,9 +113,12 @@ public class AlcPackageInventory : MonoBehaviour
     {
         if(activeSlot != -1)
         {
-            slotNumber = activeSlot;
-            ChangeItemCountBy(activeSlot, -1);
-            return items[activeSlot].item.itemIcon;
+            if (items[activeSlot].Count > 0)
+            {
+                slotNumber = activeSlot;
+                ChangeItemCountBy(activeSlot, -1);
+                return items[activeSlot].item.itemIcon;
+            }
         }
 
         slotNumber = -1;

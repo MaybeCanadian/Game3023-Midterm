@@ -14,6 +14,15 @@ public class AlcPackageInventorySlot : MonoBehaviour
     private int count;
     [SerializeField]
     private GameObject slotObject;
+    [SerializeField]
+    private GameObject selectedMarker;
+    [SerializeField]
+    private AlcPackageInventory inventory;
+    [SerializeField]
+    private int SlotNumber = 0;
+
+    [SerializeField]
+    private bool SlotIsSelected = false;
 
     private void Start()
     {
@@ -49,6 +58,12 @@ public class AlcPackageInventorySlot : MonoBehaviour
 
     public void OnSlotPressed()
     {
-        Debug.Log("slot pressed");
+        selectedMarker.SetActive(true);
+        inventory.SlotPressed(SlotNumber);
+    }
+
+    public void SetSelected(bool input)
+    {
+        selectedMarker.SetActive(input);
     }
 }

@@ -692,7 +692,7 @@ TextureImporter:
       name: menu_ui_edited_26
       rect:
         serializedVersion: 2
-        x: 210
+        x: 211
         y: 332
         width: 39
         height: 48
@@ -1277,7 +1277,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_ui_edited_56
+      name: Info
       rect:
         serializedVersion: 2
         x: 301
@@ -2189,7 +2189,6 @@ TextureImporter:
       menu_ui_edited_10: -890986877
       menu_ui_edited_12: -166557383
       menu_ui_edited_4: -1079446438
-      menu_ui_edited_56: -1385250883
       menu_ui_edited_72: -1322694731
       HP Bar Start: 1821418354
       menu_ui_edited_20: -2050533882
@@ -2247,6 +2246,7 @@ TextureImporter:
       menu_ui_edited_58: 541572528
       Small Button 1: -1925754691
       menu_ui_edited_82: 1686240148
+      Info: -1385250883
       menu_ui_edited_59: -934145362
       BG: 2043398250
       X icon: -1650374414

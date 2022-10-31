@@ -132,6 +132,7 @@ MonoBehaviour:
   itemDescription: {fileID: 1820188293510219151}
   itemCount: {fileID: 1820188292332362035}
   activeParent: {fileID: 0}
+  inventory: {fileID: 0}
   activeName: 
   activeDescription: 
   activeCount: 0
@@ -499,8 +500,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 6
-  m_fontSizeBase: 6
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

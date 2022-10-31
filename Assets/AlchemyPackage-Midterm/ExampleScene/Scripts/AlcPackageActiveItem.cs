@@ -47,10 +47,28 @@ public class AlcPackageActiveItem : MonoBehaviour
             return;
         }
 
+        activeParent.SetActive(true);
+
         itemName.text = activeName;
         itemCount.text = activeCount.ToString();
         itemDescription.text = activeDescription;
         itemIcon.sprite = activeIcon;
 
+    }
+
+    public void SetActiveItemValues(Sprite icon, string name, string description, int count)
+    {
+        activeName = name;
+        activeDescription = description;
+        activeIcon = icon;
+        activeCount = count;
+        hasItem = true;
+
+        UpdateActiveSlot();
+    }
+
+    public void SetSlotActive(bool input)
+    {
+        activeParent.SetActive(input);
     }
 }

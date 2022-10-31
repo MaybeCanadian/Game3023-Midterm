@@ -6,7 +6,7 @@ using UnityEngine;
 
 //this script can always be added as a component of a larger item script.
 //this is what the alchemy system will look for when doing all calculations
-[CreateAssetMenu(fileName = "New Alchemy Item", menuName = "Items/Base Items/New Alchemy Item")]
+[CreateAssetMenu(fileName = "New Alchemy Item", menuName = "Alchemy/New Alchemy Item")]
 public class AlchemyItem : ScriptableObject
 {
     public string itemName = "";

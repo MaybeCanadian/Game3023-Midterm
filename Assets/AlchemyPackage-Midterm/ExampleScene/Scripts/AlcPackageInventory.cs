@@ -20,6 +20,11 @@ public class AlcPackageInventory : MonoBehaviour
     [SerializeField]
     private int activeSlot = -1;
 
+    [Header("Crafting")]
+    [SerializeField]
+    private List<int> allocatedItems;
+
+
     private void Start()
     {
         activeSlot = -1;
@@ -48,6 +53,11 @@ public class AlcPackageInventory : MonoBehaviour
 
             itt++;
         }
+
+        if (activeSlot == -1)
+            return;
+
+        activeItem.UpdateValues(items[activeSlot].Count);
     } //goes through the list of items we have and shows them on the slots, the item order is the order in the list
     //if items are added or removed it should be fine.
 
@@ -78,6 +88,45 @@ public class AlcPackageInventory : MonoBehaviour
         activeItem.SetSlotActive(false);
         inventoryParent.SetActive(false);
     } //this deselects the item we had when we close the UI
+
+    public Sprite GetActiveSprite(out int slotNumber)
+    {
+        if(activeSlot != -1)
+        {
+            allocatedItems.Add(activeSlot);
+            slotNumber = activeSlot;
+            ChangeItemCountBy(activeSlot, -1);
+            return items[activeSlot].item.itemIcon;
+        }
+
+        slotNumber = -1;
+        return null;
+    } //returns the currently selected sprite, used for the crafting slots so they know what to add
+    //it has an out param that also sends the item slot it is holding so if we want to remove the item from the slot we can readd it to our counts.
+
+    public void ReturnItem(int slotNumber, int amount)
+    {
+        if (slotNumber == -1)
+            return;
+
+        allocatedItems.Remove(slotNumber);
+
+        ChangeItemCountBy(slotNumber, amount);
+    } //takes in a slot number and adds back the amount to that slot
+
+    private void ChangeItemCountBy(int slotNumber, int value)
+    {
+
+        InventoryItem tempItem;
+        tempItem.item = items[slotNumber].item;
+        tempItem.Count = items[slotNumber].Count + value;
+
+        items[slotNumber] = tempItem;
+
+        UpdateSlots();
+    } //this is a small helper function to assist with changing the count in the struct
+    //since it is passed as a copy I need to make a new one first. Might now be the best method, could make the struct a class but then we lose the
+    //editor setting
 }
 
 [System.Serializable]

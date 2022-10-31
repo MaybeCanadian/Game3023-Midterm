@@ -67,6 +67,13 @@ public class AlcPackageActiveItem : MonoBehaviour
         UpdateActiveSlot();
     }
 
+    public void UpdateValues(int count)
+    {
+        activeCount = count;
+
+        UpdateActiveSlot();
+    }
+
     public void SetSlotActive(bool input)
     {
         activeParent.SetActive(input);

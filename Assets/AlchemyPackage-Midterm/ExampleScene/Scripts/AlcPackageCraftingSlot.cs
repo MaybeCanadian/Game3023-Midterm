@@ -10,23 +10,22 @@ public class AlcPackageCraftingSlot : MonoBehaviour
     [SerializeField]
     private Image itemIcon;
     [SerializeField]
-    private TMP_Text itemCountText;
-    [SerializeField]
     private GameObject itemParent;
+    [SerializeField]
+    private AlcPackageInventory inventory;
 
     [Header("Slot Items")]
-    private AlchemyItem item;
-    [SerializeField]
-    private int itemCount = 0;
     [SerializeField]
     private Sprite itemIconSprite;
     [SerializeField]
     private bool HasItem = false;
 
+    [SerializeField]
+    private int itemSlotNumber = -1;
+
     private void Start()
     {
         SetSlotActive(false);
-        itemCount = 0;
         HasItem = false;
         itemIconSprite = null;
 
@@ -35,32 +34,31 @@ public class AlcPackageCraftingSlot : MonoBehaviour
 
     private void UpdateSlot()
     {
-        if(itemCount <= 0)
+        if(HasItem == false)
         {
             SetSlotActive(false);
             return;
         }
 
+        SetSlotActive(true);
         itemIcon.sprite = itemIconSprite;
-        itemCountText.text = itemCount.ToString();
     }
 
     public void OnSlotPressed()
     {
         if(HasItem)
         {
-            itemCount--;
-            if(itemCount <= 0)
-            {
-                SetSlotActive(false);
-                HasItem = false;
-            }
+            RemoveAllocatedItem();
         }
         else
         {
-            SetSlotActive(true);
-            itemCount = 1;
-            HasItem = true;
+            Sprite tempSprite = inventory.GetActiveSprite(out itemSlotNumber);
+
+            if (tempSprite != null)
+            {
+                itemIconSprite = tempSprite;
+                HasItem = true;
+            }
         }
 
         UpdateSlot();
@@ -69,5 +67,12 @@ public class AlcPackageCraftingSlot : MonoBehaviour
     public void SetSlotActive(bool input)
     {
         itemParent.SetActive(input);
+    }
+
+    private void RemoveAllocatedItem()
+    {
+        inventory.ReturnItem(itemSlotNumber, 1);
+        HasItem = false;
+        UpdateSlot();
     }
 }

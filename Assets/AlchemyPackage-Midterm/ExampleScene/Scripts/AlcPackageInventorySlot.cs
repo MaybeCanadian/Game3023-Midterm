@@ -21,9 +21,6 @@ public class AlcPackageInventorySlot : MonoBehaviour
     [SerializeField]
     private int SlotNumber = 0;
 
-    [SerializeField]
-    private bool SlotIsSelected = false;
-
     private void Start()
     {
         UpdateCount();

@@ -12,11 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe5432e7a6822643bcf55fbeaa787d5, type: 3}
   m_Name: Carrot Bread
   m_EditorClassIdentifier: 
-  itemName: 
-  Description: 
-  UseEffects: []
-  itemUseEffect: 
-  CraftingEffects: []
-  itemIcon: {fileID: 0}
+  itemName: Carrot Bread
+  Description: Bread but carrot.
+  UseEffects:
+  - effectType: 0
+    strength: 30
+    duration: 1
+  - effectType: 1
+    strength: -10
+    duration: 1
+  itemUseEffect: 'Gain 30 Health.
+
+    Lose 10 Mana.'
+  CraftingEffects:
+  - effectType: 0
+    strength: 40
+    duration: 1
+  - effectType: 1
+    strength: -20
+    duration: 1
+  - effectType: 2
+    strength: 5
+    duration: 1
+  itemIcon: {fileID: 21300000, guid: 6e48436d20356784fb41c3dbc82617b7, type: 3}
   Consumable: 1
   CanBeIngredient: 1

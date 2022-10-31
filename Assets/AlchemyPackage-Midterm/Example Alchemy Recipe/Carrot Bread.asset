@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eedf1a9a5be8ae24fa6b075acc32002f, type: 3}
   m_Name: Carrot Bread
   m_EditorClassIdentifier: 
-  ingredients: []
-  outPutItem: {fileID: 0}
+  ingredients:
+  - {fileID: 11400000, guid: 8e57f42dcf7866a48a7ca5d8f222d860, type: 2}
+  - {fileID: 11400000, guid: 8e57f42dcf7866a48a7ca5d8f222d860, type: 2}
+  - {fileID: 11400000, guid: be2f787f663c6a24cb25f4726b425fca, type: 2}
+  outPutItem: {fileID: 11400000, guid: 7e449a66c608f2149bd8255003f675e2, type: 2}
   successChance: 100
-  amountProduced: 1
+  amountProduced: 2

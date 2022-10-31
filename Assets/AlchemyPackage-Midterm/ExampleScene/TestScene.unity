@@ -1349,8 +1349,8 @@ MonoBehaviour:
     Count: 10
   - item: {fileID: 11400000, guid: be2f787f663c6a24cb25f4726b425fca, type: 2}
     Count: 50
-  - item: {fileID: 11400000, guid: b965f4604ab0372458ab2dadd472da27, type: 2}
-    Count: 50
+  - item: {fileID: 11400000, guid: 8e57f42dcf7866a48a7ca5d8f222d860, type: 2}
+    Count: 100
   itemSlots:
   - {fileID: 1817658974}
   - {fileID: 1953964860}
@@ -1406,6 +1406,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 60c50b91a4e56294dbfe03eaeb400bda, type: 2}
   - {fileID: 11400000, guid: 70a87b43af7e12249b47e19ecb5466fc, type: 2}
   - {fileID: 11400000, guid: f77c7ad4ba868c7428ecef1cf7370715, type: 2}
+  - {fileID: 11400000, guid: 643569ae9dde48647b6b92388cffe6b0, type: 2}
+  - {fileID: 11400000, guid: da2a937dabc981c4c8bb8afec4cb601f, type: 2}
   ingredients: []
   IgnoreValidityCheck: 0
   allowDefaultOutput: 1

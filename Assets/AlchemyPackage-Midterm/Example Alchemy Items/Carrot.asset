@@ -12,11 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe5432e7a6822643bcf55fbeaa787d5, type: 3}
   m_Name: Carrot
   m_EditorClassIdentifier: 
-  itemName: 
-  Description: 
-  UseEffects: []
-  itemUseEffect: 
-  CraftingEffects: []
-  itemIcon: {fileID: 0}
+  itemName: Carrot
+  Description: Long and orange.
+  UseEffects:
+  - effectType: 0
+    strength: 2
+    duration: 1
+  - effectType: 1
+    strength: 2
+    duration: 1
+  itemUseEffect: 'Gain 2 Health.
+
+    Gain 2 Mana.'
+  CraftingEffects:
+  - effectType: 0
+    strength: 10
+    duration: 1
+  - effectType: 1
+    strength: -2
+    duration: 1
+  itemIcon: {fileID: 21300000, guid: db1b7edbdde91544bb64f8c375c9098c, type: 3}
   Consumable: 1
   CanBeIngredient: 1

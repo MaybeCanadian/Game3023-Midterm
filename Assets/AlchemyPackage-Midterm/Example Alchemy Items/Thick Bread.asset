@@ -12,11 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe5432e7a6822643bcf55fbeaa787d5, type: 3}
   m_Name: Thick Bread
   m_EditorClassIdentifier: 
-  itemName: 
-  Description: 
-  UseEffects: []
-  itemUseEffect: 
+  itemName: Thick Bread
+  Description: It is thick
+  UseEffects:
+  - effectType: 0
+    strength: 100
+    duration: 1
+  - effectType: 1
+    strength: -50
+    duration: 1
+  - effectType: 2
+    strength: 100
+    duration: 1
+  itemUseEffect: 'Gain 100 Health.
+
+    Lose 50 Mana.
+
+    Gain 100 Stamina'
   CraftingEffects: []
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 21f018150f45ce640bc066fa15f5505d, type: 3}
   Consumable: 1
-  CanBeIngredient: 1
+  CanBeIngredient: 0

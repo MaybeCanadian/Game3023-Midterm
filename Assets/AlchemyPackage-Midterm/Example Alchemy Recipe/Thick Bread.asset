@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eedf1a9a5be8ae24fa6b075acc32002f, type: 3}
   m_Name: Thick Bread
   m_EditorClassIdentifier: 
-  ingredients: []
-  outPutItem: {fileID: 0}
+  ingredients:
+  - {fileID: 11400000, guid: 7e449a66c608f2149bd8255003f675e2, type: 2}
+  - {fileID: 11400000, guid: 7e449a66c608f2149bd8255003f675e2, type: 2}
+  outPutItem: {fileID: 11400000, guid: 87f406892241f1e469d25064c7a29c5f, type: 2}
   successChance: 100
   amountProduced: 1

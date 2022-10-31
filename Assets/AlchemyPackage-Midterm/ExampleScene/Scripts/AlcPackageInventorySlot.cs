@@ -20,6 +20,13 @@ public class AlcPackageInventorySlot : MonoBehaviour
         UpdateCount();
     }
 
+    public void SetSlot(Sprite slotIcon, int slotCount)
+    {
+        icon.sprite = slotIcon;
+        count = slotCount;
+        UpdateCount();
+    }
+
     private void UpdateCount()
     {
         if (count <= 0)
@@ -31,11 +38,17 @@ public class AlcPackageInventorySlot : MonoBehaviour
     }
 
     public void SetSlotInactive()
-    { 
+    {
+        slotObject.SetActive(false);
     }
 
     public void SetSlotActive()
     {
         slotObject.SetActive(true);
+    }
+
+    public void OnSlotPressed()
+    {
+        Debug.Log("slot pressed");
     }
 }

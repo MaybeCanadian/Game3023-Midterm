@@ -36,13 +36,15 @@ public class AlcPackageCraftingController : MonoBehaviour
 
         slotNumber = inSlotNum;
         return tempSprite;
-    }
+    } //returns the image used in the currently active slot. It also send swhat that slot is so the crafting
+    //system knows what items they have. It calls the same function in the inventory script to do this
 
     public void RemoveItemFromCrafting(int slotNumber)
     {
         allocatedItems.Remove(slotNumber);
         AlcPackageInventory.instance.ReturnItem(slotNumber, 1);
-    }
+    } //removes an item from the grid by tracking the change in the allocated items and by sending it 
+    //to the inventory.
 
     public void OnCancelButtonPressed()
     {
@@ -52,7 +54,7 @@ public class AlcPackageCraftingController : MonoBehaviour
         }
 
         allocatedItems.Clear();
-    }
+    }  //removes all the items from the slots and send them all back to the inventory
 
     public void OnConfirmButtonPressed()
     {
@@ -90,5 +92,6 @@ public class AlcPackageCraftingController : MonoBehaviour
 
             allocatedItems.Clear();
         }
-    }
+    } //figures out all the alchemy items needed then sends them all to the alchemy controller. After it takes the out
+    //put and send that to the inventory
 }

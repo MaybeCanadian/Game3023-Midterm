@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,7 +60,15 @@ public class AlchemyController : MonoBehaviour
         {
             if (CheckRecipe(recipe))
             {
-                
+                float randomChance = UnityEngine.Random.Range(0, 100);
+                if(recipe.successChance < randomChance)
+                {
+                    amount = 0;
+                    consumed = true;
+                    Debug.Log("oops, crafting failed.");
+                    return null;
+                }
+
                 amount = recipe.amountProduced;
                 consumed = true;
                 return MakeOutPut(recipe);

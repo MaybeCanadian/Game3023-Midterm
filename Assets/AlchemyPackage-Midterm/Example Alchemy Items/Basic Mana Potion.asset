@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe5432e7a6822643bcf55fbeaa787d5, type: 3}
   m_Name: Basic Mana Potion
   m_EditorClassIdentifier: 
-  itemName: 
-  Description: 
-  UseEffects: []
-  itemUseEffect: 
+  itemName: Basic Mana Potion
+  Description: A small Potion of a strange liquid. You feel magic eminate from this.
+  UseEffects:
+  - effectType: 1
+    strength: 30
+    duration: 1
+  itemUseEffect: Gain 30 Mana.
   CraftingEffects: []
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: de425016f70f4b14cb22081d1620ab4e, type: 3}
   Consumable: 1
-  CanBeIngredient: 1
+  CanBeIngredient: 0

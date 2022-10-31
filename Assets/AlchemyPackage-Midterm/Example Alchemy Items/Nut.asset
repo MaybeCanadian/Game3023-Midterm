@@ -22,6 +22,7 @@ MonoBehaviour:
   CraftingEffects:
   - effectType: 0
     strength: 7
-    duration: 0
+    duration: 1
   itemIcon: {fileID: 21300000, guid: c0c6f69c9b1b4a943a649eb5f4d191bc, type: 3}
+  Consumable: 1
   CanBeIngredient: 1

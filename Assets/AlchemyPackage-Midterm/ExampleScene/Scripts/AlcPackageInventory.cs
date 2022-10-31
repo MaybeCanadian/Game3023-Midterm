@@ -71,17 +71,6 @@ public class AlcPackageInventory : MonoBehaviour
     } //goes through the list of items we have and shows them on the slots, the item order is the order in the list
     //if items are added or removed it should be fine.
 
-    private void RemoveEmpty()
-    {
-        foreach(InventoryItem item in items)
-        {
-            if(item.Count <= 0)
-            {
-                items.Remove(item);
-            }
-        } 
-    }
-
     public void SlotPressed(int slotNumber)
     {
         ResetSelectedSlot();

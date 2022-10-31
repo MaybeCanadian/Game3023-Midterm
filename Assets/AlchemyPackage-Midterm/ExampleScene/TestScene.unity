@@ -388,7 +388,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &56689584
 RectTransform:
   m_ObjectHideFlags: 0
@@ -940,7 +940,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 300683187}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 346786138}
+        m_TargetAssemblyTypeName: AlcPackageCraftingController, Assembly-CSharp
+        m_MethodName: OnConfirmButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &300683187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1335,6 +1347,10 @@ MonoBehaviour:
     Count: 25
   - item: {fileID: 11400000, guid: 5a4826994a3918046bd3e139aa97218b, type: 2}
     Count: 10
+  - item: {fileID: 11400000, guid: be2f787f663c6a24cb25f4726b425fca, type: 2}
+    Count: 50
+  - item: {fileID: 11400000, guid: b965f4604ab0372458ab2dadd472da27, type: 2}
+    Count: 50
   itemSlots:
   - {fileID: 1817658974}
   - {fileID: 1953964860}
@@ -1374,7 +1390,6 @@ MonoBehaviour:
   - {fileID: 2108606253}
   - {fileID: 555146473}
   allocatedItems: 
-  inventory: {fileID: 346786137}
 --- !u!114 &346786139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1389,6 +1404,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipes:
   - {fileID: 11400000, guid: 60c50b91a4e56294dbfe03eaeb400bda, type: 2}
+  - {fileID: 11400000, guid: 70a87b43af7e12249b47e19ecb5466fc, type: 2}
+  - {fileID: 11400000, guid: f77c7ad4ba868c7428ecef1cf7370715, type: 2}
+  ingredients: []
+  IgnoreValidityCheck: 0
+  allowDefaultOutput: 1
+  defaultOutPut: {fileID: 11400000, guid: f22ddca539dad3849ac7a6c75f78d688, type: 2}
 --- !u!1 &356577927
 GameObject:
   m_ObjectHideFlags: 0
@@ -5168,8 +5189,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 77.15944, y: -165.2}
-  m_SizeDelta: {x: 70.1155, y: 30}
+  m_AnchoredPosition: {x: 164.6, y: -406.0459}
+  m_SizeDelta: {x: 141.32, y: 62.0919}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1132610533
 MonoBehaviour:
@@ -5214,7 +5235,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1132610534}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 346786137}
+        m_TargetAssemblyTypeName: AlcPackageInventory, Assembly-CSharp
+        m_MethodName: OnDropButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1132610534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8824,8 +8857,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 77.15944, y: -129.85541}
-  m_SizeDelta: {x: 70.1155, y: 30}
+  m_AnchoredPosition: {x: 164.6018, y: -317.55313}
+  m_SizeDelta: {x: 141.3195, y: 67.1063}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2090149650
 MonoBehaviour:
@@ -8870,7 +8903,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2090149651}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 346786137}
+        m_TargetAssemblyTypeName: AlcPackageInventory, Assembly-CSharp
+        m_MethodName: OnUseButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2090149651
 MonoBehaviour:
   m_ObjectHideFlags: 0

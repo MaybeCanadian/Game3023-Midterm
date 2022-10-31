@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eedf1a9a5be8ae24fa6b075acc32002f, type: 3}
   m_Name: Basic Mana Potion
   m_EditorClassIdentifier: 
-  ingredients: []
-  outPutItem: {fileID: 0}
+  ingredients:
+  - {fileID: 11400000, guid: 5a6b21733b79fc84997aa9163692e34d, type: 2}
+  - {fileID: 11400000, guid: be2f787f663c6a24cb25f4726b425fca, type: 2}
+  outPutItem: {fileID: 11400000, guid: cb434b8e088bbb14aa2681204f884a1d, type: 2}
   successChance: 100
   amountProduced: 1

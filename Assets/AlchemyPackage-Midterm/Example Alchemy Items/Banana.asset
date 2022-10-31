@@ -12,11 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe5432e7a6822643bcf55fbeaa787d5, type: 3}
   m_Name: Banana
   m_EditorClassIdentifier: 
-  itemName: 
-  Description: 
-  UseEffects: []
-  itemUseEffect: 
-  CraftingEffects: []
-  itemIcon: {fileID: 0}
+  itemName: Banana
+  Description: It is long and yellow, maybe a type of sword? Good in crafting
+  UseEffects:
+  - effectType: 2
+    strength: 3
+    duration: 1
+  itemUseEffect: Gain 3 Stamina
+  CraftingEffects:
+  - effectType: 2
+    strength: 7
+    duration: 1
+  itemIcon: {fileID: 21300000, guid: f836d41b5ee76504c9aead50abef9104, type: 3}
   Consumable: 1
   CanBeIngredient: 1

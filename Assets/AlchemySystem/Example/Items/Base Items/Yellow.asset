@@ -16,3 +16,6 @@ MonoBehaviour:
   description: A Yellow is an exotic fruit rich in potassium. It was named so by
     the same person who named the Orange.
   isConsumable: 1
+  alchemy:
+    AlchemyName: 
+    Effects: []

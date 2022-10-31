@@ -10,6 +10,8 @@ public class Item : ScriptableObject //Extending SO allows us to have an object 
     public string description = "";
     public bool isConsumable = false;
 
+    public AlchemyItemComponent alchemy;
+
     public void Use()
     {
         Debug.Log("Used item: " + name + " - " + description);

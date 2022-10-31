@@ -164,7 +164,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_ui_edited_1
+      name: Menu Button 1
       rect:
         serializedVersion: 2
         x: 82
@@ -605,7 +605,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_ui_edited_22
+      name: Menu Button 2
       rect:
         serializedVersion: 2
         x: 82
@@ -626,7 +626,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_ui_edited_23
+      name: Small Button 2
       rect:
         serializedVersion: 2
         x: 145
@@ -647,7 +647,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_ui_edited_24
+      name: Bar BG
       rect:
         serializedVersion: 2
         x: 178
@@ -752,12 +752,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_ui_edited_29
+      name: MP Bar Start
       rect:
         serializedVersion: 2
         x: 341
         y: 373
-        width: 12
+        width: 2
         height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -836,12 +836,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_ui_edited_33
+      name: HP Bar Start
       rect:
         serializedVersion: 2
         x: 341
         y: 364
-        width: 12
+        width: 2
         height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -857,7 +857,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_ui_edited_34
+      name: Manu Button 3
       rect:
         serializedVersion: 2
         x: 82
@@ -878,7 +878,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_ui_edited_35
+      name: Small Button 1
       rect:
         serializedVersion: 2
         x: 145
@@ -899,12 +899,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_ui_edited_36
+      name: Stam Bar Start
       rect:
         serializedVersion: 2
         x: 341
         y: 355
-        width: 12
+        width: 2
         height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1424,7 +1424,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_ui_edited_63
+      name: X icon
       rect:
         serializedVersion: 2
         x: 318
@@ -1990,6 +1990,174 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Inventory UI
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 174
+        width: 122
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9afa3d5064c6b6343ae09e485beee306
+      internalID: -956478287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player UI
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 236
+        width: 123
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85f6864f00ed5cb45b8ae6fbf21aad88
+      internalID: 945787494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MP Bar Middle
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 373
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2834f80d6849a54499461b28ece9dc79
+      internalID: 2126464063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MP Bar End
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 373
+        width: 2
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f479d7a5eda5d09488ac795ddedb845c
+      internalID: 1308719760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HP Bar Middle
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 364
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d877218d2e9de4b9824e80d679c7f5
+      internalID: 1543722850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HP Bar End
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 364
+        width: 2
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ed60a9b2672514e84a2ed60b5a954d
+      internalID: -2042658981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stam Bar Middle
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 355
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583c7cc28d0711846a8d89f0d1590fa6
+      internalID: 1246726938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stam Bar End
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 355
+        width: 2
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecea8fccea4803149aab4101da06cec0
+      internalID: -833996240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -2001,12 +2169,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      menu_ui_edited_34: -906334406
       menu_ui_edited_52: -1563856165
-      menu_ui_edited_33: 1821418354
+      MP Bar Middle: 2126464063
+      menu_ui_edited_49: -1274358055
       menu_ui_edited_55: 1189409190
       menu_ui_edited_41: -1838884685
-      menu_ui_edited_49: -1274358055
       menu_ui_edited_26: 1997159214
       menu_ui_edited_17: -1283302132
       menu_ui_edited_70: 2112370075
@@ -2015,26 +2182,30 @@ TextureImporter:
       menu_ui_edited_30: -2024084302
       menu_ui_edited_40: 633048873
       menu_ui_edited_21: -434697505
-      menu_ui_edited_51: 1226723271
       menu_ui_edited_73: -180735976
-      menu_ui_edited_43: 1826263469
       menu_ui_edited_62: -1600189573
+      menu_ui_edited_43: 1826263469
+      menu_ui_edited_88: -1085921977
       menu_ui_edited_10: -890986877
       menu_ui_edited_12: -166557383
       menu_ui_edited_4: -1079446438
-      menu_ui_edited_88: -1085921977
       menu_ui_edited_56: -1385250883
       menu_ui_edited_72: -1322694731
+      HP Bar Start: 1821418354
       menu_ui_edited_20: -2050533882
-      menu_ui_edited_36: 2074054618
       menu_ui_edited_50: -496827347
       menu_ui_edited_44: 1000465552
+      Stam Bar End: -833996240
       menu_ui_edited_47: 895315308
+      Stam Bar Middle: 1246726938
       menu_ui_edited_28: -1108013949
+      Inventory UI: 1226723271
+      Stam Bar Start: 2074054618
+      MP Bar Start: 1099890546
+      Bar BG: 368939343
       menu_ui_edited_11: 222952782
       menu_ui_edited_64: -454147056
       menu_ui_edited_14: -1891701313
-      menu_ui_edited_24: 368939343
       menu_ui_edited_83: 566459277
       menu_ui_edited_48: 1343049789
       menu_ui_edited_45: 500772515
@@ -2048,7 +2219,8 @@ TextureImporter:
       menu_ui_edited_79: 759175918
       menu_ui_edited_53: 641719615
       menu_ui_edited_80: 924472027
-      menu_ui_edited_63: -1650374414
+      Menu Button 1: -975226562
+      Small Button 2: 1891396140
       menu_ui_edited_42: 2080844680
       menu_ui_edited_25: 1141744039
       menu_ui_edited_85: -389655954
@@ -2057,29 +2229,31 @@ TextureImporter:
       menu_ui_edited_81: -1215670006
       menu_ui_edited_38: -3748891
       menu_ui_edited_89: -184345116
+      Player UI: 945787494
       menu_ui_edited_69: -2113547350
+      MP Bar End: 1308719760
       menu_ui_edited_18: 81274047
       menu_ui_edited_6: 446108668
       menu_ui_edited_46: -1320722364
-      menu_ui_edited_23: 1891396140
-      menu_ui_edited_1: -975226562
       menu_ui_edited_2: -1551843519
       menu_ui_edited_61: -234151986
       menu_ui_edited_0: 306017970
       menu_ui_edited_9: -174069099
-      menu_ui_edited_35: -1925754691
+      Manu Button 3: -906334406
       menu_ui_edited_19: -1662642469
       menu_ui_edited_65: 1389473963
       menu_ui_edited_27: -1996695656
-      menu_ui_edited_82: 1686240148
+      Menu Button 2: 1536774132
       menu_ui_edited_58: 541572528
+      Small Button 1: -1925754691
+      menu_ui_edited_82: 1686240148
       menu_ui_edited_59: -934145362
       BG: 2043398250
+      X icon: -1650374414
       menu_ui_edited_39: 869587467
-      menu_ui_edited_29: 1099890546
+      HP Bar End: -2042658981
       menu_ui_edited_75: 92294495
       menu_ui_edited_78: -1037321720
-      menu_ui_edited_22: 1536774132
       menu_ui_edited_8: -1292780146
       menu_ui_edited_31: 1741153947
       menu_ui_edited_84: -1511603102
@@ -2091,6 +2265,7 @@ TextureImporter:
       menu_ui_edited_66: -1074782027
       menu_ui_edited_71: 243039951
       menu_ui_edited_7: -823526265
+      HP Bar Middle: 1543722850
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

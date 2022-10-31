@@ -75,4 +75,10 @@ public class AlcPackageCraftingSlot : MonoBehaviour
         HasItem = false;
         UpdateSlot();
     }
+
+    public void ConsumeItem()
+    {
+        HasItem = false;
+        UpdateSlot();
+    }
 }

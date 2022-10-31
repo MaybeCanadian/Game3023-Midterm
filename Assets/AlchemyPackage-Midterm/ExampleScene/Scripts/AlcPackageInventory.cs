@@ -62,7 +62,6 @@ public class AlcPackageInventory : MonoBehaviour
         ResetSelectedSlot();
         if(items.Count >= slotNumber)
         {
-            Debug.Log("pressed on " + items[slotNumber].item.itemName);
             activeItem.SetActiveItemValues(items[slotNumber].item.itemIcon, items[slotNumber].item.itemName,
                 items[slotNumber].item.Description, items[slotNumber].Count, items[slotNumber].item.itemUseEffect);
 
@@ -127,8 +126,30 @@ public class AlcPackageInventory : MonoBehaviour
             return null;
 
         return items[slotNumber].item;
-    }
+    } //this returns the scriptableobject item in that slot, this is so the crafting controller can send this to alchemy
 
+    public void AddItem(AlchemyItem item, int amount)
+    {
+        int itt = 0;
+        foreach(InventoryItem InvItem in items)
+        {
+            if(InvItem.item == item)
+            {
+                ChangeItemCountBy(itt, amount);
+                return;
+            }
+
+            itt++;
+        }
+
+        InventoryItem tempItem;
+        tempItem.item = item;
+        tempItem.Count = amount;
+
+        items.Add(tempItem);
+
+        UpdateSlots();
+    }
 }
 
 [System.Serializable]

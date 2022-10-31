@@ -79,6 +79,8 @@ public class AlcPackageCraftingController : MonoBehaviour
             {
                 slot.ConsumeItem(); //this removes the items used, consumes them
             }
+
+            allocatedItems.Clear();
         }
     }
 }

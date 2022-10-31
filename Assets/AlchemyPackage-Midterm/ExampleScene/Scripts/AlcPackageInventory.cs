@@ -150,6 +150,25 @@ public class AlcPackageInventory : MonoBehaviour
 
         UpdateSlots();
     }
+
+    public void OnUseButtonPressed() //if you have an item selected it will use it.
+    {
+        if (activeSlot == -1)
+            return;
+
+        items[activeSlot].item.Use();
+        if (items[activeSlot].item.Consumable)
+            ChangeItemCountBy(activeSlot, -1);
+
+    }
+
+    public void OnDropButtonPressed() //if you have an item selected, it reduces the number you have of it by 1
+    {
+        if (activeSlot == -1)
+            return;
+
+        ChangeItemCountBy(activeSlot, -1);
+    }
 }
 
 [System.Serializable]

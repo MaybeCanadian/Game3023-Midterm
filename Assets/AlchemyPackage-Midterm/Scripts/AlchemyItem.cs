@@ -17,8 +17,36 @@ public class AlchemyItem : ScriptableObject
     public string itemUseEffect = "";
     public List<Effect> CraftingEffects;
     public Sprite itemIcon;
+    public bool Consumable = true;
 
     public bool CanBeIngredient = true;
+
+    public void Use()
+    {
+        Debug.Log("doing stuff");
+    }
+
+    public void SetEffectText()
+    {
+        string temp = "";
+
+        foreach(Effect effect in UseEffects)
+        {
+            string line = "";
+            if(effect.strength < 0)
+            {
+                line += "Lose " + effect.strength + " " + effect.effectType.ToString();
+            }
+            else
+            {
+                line += "Gain " + effect.strength + " " + effect.effectType.ToString();
+            }
+
+            temp += line + "\n";
+        }
+
+        itemUseEffect = temp;
+    }
 }
 
 [System.Serializable]
@@ -35,7 +63,7 @@ public struct Effect
 [System.Serializable]
 public enum EffectTypes
 {
-    HealthGain,
-    ManaGain,
-    StaminaGain
+    Health,
+    Mana,
+    Stamina
 }

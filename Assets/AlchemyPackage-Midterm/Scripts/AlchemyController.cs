@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class AlchemyController : MonoBehaviour
@@ -18,7 +20,15 @@ public class AlchemyController : MonoBehaviour
 
     public AlchemyItem StartCraft(List<AlchemyItem> input, out int amount, out bool consumed) 
     {
+        ingredients.Clear();
         ingredients = input;
+        
+        if(input.Count <= 0)
+        {
+            consumed = false;
+            amount = 0;
+            return null;
+        }
 
         if (!IgnoreValidityCheck)
         {
@@ -54,7 +64,7 @@ public class AlchemyController : MonoBehaviour
 
     private bool CheckRecipe(AlchemyRecipes recipe) 
     {
-        return true;
+        return false;
     }
 
     private AlchemyItem MakeOutPut(AlchemyRecipes recipe)
@@ -68,12 +78,69 @@ public class AlchemyController : MonoBehaviour
 
     private AlchemyItem MakeDefaultOutPut()
     {
-        AlchemyItem outPut = ScriptableObject.CreateInstance<AlchemyItem>();
-        outPut = defaultOutPut;
+        AlchemyItem outPut = Instantiate<AlchemyItem>(defaultOutPut);
+        if (!outPut)
+            Debug.Log("Can't make the alchemy item");
+        outPut.itemName = "test";
+        outPut.UseEffects = DetermineNewEffects();
+        outPut.SetEffectText();
 
         return outPut;
     }
 
+    private List<Effect> DetermineNewEffects()
+    {
+        List<Effect> newEffects = new List<Effect>();
+
+        List<Effect> allEffects = new List<Effect>();
+
+        foreach(AlchemyItem item in ingredients)
+        {
+            foreach(Effect effect in item.CraftingEffects)
+            {
+                allEffects.Add(effect);
+            }
+        }
+
+        string[] EffectTypeNames = System.Enum.GetNames(typeof(EffectTypes));
+
+        float StrngthTotal = 0;
+        float DurationTotal = 0;
+
+        foreach(string effecttype in EffectTypeNames)
+        {
+            Debug.Log(effecttype);
+
+            StrngthTotal = 0;
+            DurationTotal = 0;
+
+            Effect TempEffect = new Effect();
+
+            foreach (Effect effect in allEffects)
+            {
+                if(effect.effectType.ToString() == effecttype)
+                {
+                    TempEffect.effectType = effect.effectType;
+                    StrngthTotal += effect.strength;
+                    DurationTotal = Mathf.Max(DurationTotal, effect.duration);
+                }
+            }
+
+            Debug.Log(StrngthTotal);
+            Debug.Log(DurationTotal);
+            if(StrngthTotal != 0 && DurationTotal > 0)
+            {
+                Debug.Log(effecttype);
+                TempEffect.strength = StrngthTotal;
+                TempEffect.duration = DurationTotal;
+
+                newEffects.Add(TempEffect);
+            } 
+            
+        }
+
+        return newEffects;
+    }
     private string PrintCurrentItems()
     {
         string temp = "";

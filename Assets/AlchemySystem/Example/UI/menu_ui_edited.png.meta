@@ -1256,12 +1256,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_ui_edited_55
+      name: Yes No
       rect:
         serializedVersion: 2
-        x: 173
+        x: 276
         y: 196
-        width: 120
+        width: 17
         height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2172,7 +2172,6 @@ TextureImporter:
       menu_ui_edited_52: -1563856165
       MP Bar Middle: 2126464063
       menu_ui_edited_49: -1274358055
-      menu_ui_edited_55: 1189409190
       menu_ui_edited_41: -1838884685
       menu_ui_edited_26: 1997159214
       menu_ui_edited_17: -1283302132
@@ -2218,6 +2217,7 @@ TextureImporter:
       menu_ui_edited_79: 759175918
       menu_ui_edited_53: 641719615
       menu_ui_edited_80: 924472027
+      Yes No: 1189409190
       Menu Button 1: -975226562
       Small Button 2: 1891396140
       menu_ui_edited_42: 2080844680

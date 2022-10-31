@@ -20,10 +20,6 @@ public class AlcPackageInventory : MonoBehaviour
     [SerializeField]
     private int activeSlot = -1;
 
-    [Header("Crafting")]
-    [SerializeField]
-    private List<int> allocatedItems;
-
 
     private void Start()
     {
@@ -93,7 +89,6 @@ public class AlcPackageInventory : MonoBehaviour
     {
         if(activeSlot != -1)
         {
-            allocatedItems.Add(activeSlot);
             slotNumber = activeSlot;
             ChangeItemCountBy(activeSlot, -1);
             return items[activeSlot].item.itemIcon;
@@ -108,8 +103,6 @@ public class AlcPackageInventory : MonoBehaviour
     {
         if (slotNumber == -1)
             return;
-
-        allocatedItems.Remove(slotNumber);
 
         ChangeItemCountBy(slotNumber, amount);
     } //takes in a slot number and adds back the amount to that slot
@@ -127,6 +120,7 @@ public class AlcPackageInventory : MonoBehaviour
     } //this is a small helper function to assist with changing the count in the struct
     //since it is passed as a copy I need to make a new one first. Might now be the best method, could make the struct a class but then we lose the
     //editor setting
+
 }
 
 [System.Serializable]

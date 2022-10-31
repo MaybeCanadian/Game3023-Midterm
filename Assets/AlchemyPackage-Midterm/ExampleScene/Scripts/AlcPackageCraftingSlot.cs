@@ -12,7 +12,7 @@ public class AlcPackageCraftingSlot : MonoBehaviour
     [SerializeField]
     private GameObject itemParent;
     [SerializeField]
-    private AlcPackageInventory inventory;
+    private AlcPackageCraftingController controller;
 
     [Header("Slot Items")]
     [SerializeField]
@@ -52,7 +52,7 @@ public class AlcPackageCraftingSlot : MonoBehaviour
         }
         else
         {
-            Sprite tempSprite = inventory.GetActiveSprite(out itemSlotNumber);
+            Sprite tempSprite = controller.GetActiveSprite(out itemSlotNumber);
 
             if (tempSprite != null)
             {
@@ -69,9 +69,9 @@ public class AlcPackageCraftingSlot : MonoBehaviour
         itemParent.SetActive(input);
     }
 
-    private void RemoveAllocatedItem()
+    public void RemoveAllocatedItem()
     {
-        inventory.ReturnItem(itemSlotNumber, 1);
+        controller.RemoveItemFromCrafting(itemSlotNumber);
         HasItem = false;
         UpdateSlot();
     }
